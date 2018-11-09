@@ -35,6 +35,7 @@
 #'   is_monotonic( 5:-5 )                   # TRUE
 #'   is_monotonic( c(1,5,3))                # FALSE
 #'   
+#' @importFrom stats na.omit
 #' @rdname tests
 #' @export
 

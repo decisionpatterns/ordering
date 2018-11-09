@@ -34,8 +34,8 @@ test_that( "int", {
   int_strictly_increasing %>% is_sorted %>% expect_true()
   int_strictly_decreasing %>% is_sorted %>% expect_true()
   
-  int_strictly_increasing %>% monotonicity() %>% expect_equal(2)
-  int_strictly_decreasing %>% monotonicity() %>% expect_equal(-2)
+  # int_strictly_increasing %>% monotonicity() %>% expect_equal(2)
+  # int_strictly_decreasing %>% monotonicity() %>% expect_equal(-2)
   
 })
 

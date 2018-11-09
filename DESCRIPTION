@@ -1,16 +1,19 @@
 Package: ordering
 Type: Package
 Title: Test, Check, Verify, Investigate the Monotonic Properties of Vectors
-Version: 0.6.0
-Date: 2018-06-03
-Author: Christopher Brown
+Version: 0.7.0
+Date: 2018-11-09
+Authors@R: c(
+    person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
+    person("Decision Patterns", role = "cph")
+    )
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
-Description: This package provides several functions for 
-    testing/checking/verify/investigating the ordering of vectors. 
+Description: Functions to test/check/verify/investigate the ordering of vectors. 
     The 'is_[strictly_]*' family of functions test vectors for 
-    'monotonic', 'increasing', 'decreasing', 'sorted' properties; 'is_constant' 
+    'sorted', 'monotonic', 'increasing', 'decreasing' order; 'is_constant' 
     and 'is_incremental' test for the degree of ordering. `ordering` 
-    reports ordering type.   
+    provides a numeric indication of ordering -2 (strictly decreasing) to 
+    2 (strictly increasing).
 Suggests:
     testthat, 
     na.tools(>= 0.3.0)

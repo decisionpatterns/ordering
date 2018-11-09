@@ -2,9 +2,9 @@
 # 
 # Test if a field is incrementally increasing or decreasing ordered
 #
-#' @param x numeric vector for testing for incremental ordering
+# @param x numeric vector for testing for incremental ordering
 #' @param step integer; step size for `is_incremental`. (Default: 1)` 
-#' @param na.rm logical; whether to omit `NA` values. (Default: TRUE)
+# @param na.rm logical; whether to omit `NA` values. (Default: TRUE)
 # 
 #' @details 
 #' 

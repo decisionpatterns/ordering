@@ -1,9 +1,10 @@
-# monotone
+# ordering
 
-**Test, Check, Verify, Investigate the Monotonic Properties of Numeric Vectors**
+**Test/Check/Verify/Investigate the Ordering of Vectors**
 
-**monotone** provides several functions for testing/checking/verify/investigating the ordering properties of vectors (numeric or otherwise). 
+**ordering** provides several functions for testing/checking/verify/investigating the ordering of vectors (numeric or otherwise). 
 
+The packages has the following tests:
 
     is_[strictly_]*
     
@@ -23,11 +24,11 @@ In addition:
 
 Install using the standard methods 
 
-    install.packages('monotone')
+    install.packages('ordering')
      
     # -OR-
      
-    devtools::install_github( "decisionpatterns/monotone")
+    devtools::install_github( "decisionpatterns/ordering")
 
 
 ## Usage 
@@ -36,8 +37,8 @@ The usage of the packages is probably best demonstrated by a few examples:
 
     x <- 1:5
     
-    is_monotonic(x)           # TRUE
-    is_strictly_monotonic(x)  # TRUE
+    is_sorted(x)              # TRUE
+    is_strictly_sorted(x)     # TRUE
     
     is_increasing(x)          # TRUE    
     is_strictly_increasing(x) # TRUE

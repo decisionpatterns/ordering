@@ -52,10 +52,6 @@ missing values}
 \item{step}{integer; step size for \code{is_incremental}. (Default: 1)`}
 
 \item{...}{used for passing default arguments}
-
-\item{x}{numeric vector for testing for incremental ordering}
-
-\item{na.rm}{logical; whether to omit \code{NA} values. (Default: TRUE)}
 }
 \value{
 logical or NA. (NB: NA is returned because it is a logical vector and this is

@@ -1,4 +1,4 @@
 library(testthat)
-library(monotone)
+library(ordering)
 
-test_check("monotone")
+test_check("ordering")

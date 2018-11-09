@@ -1,3 +1,5 @@
+# ordering 0.7.0 
+
 # monotone 0.4.1
 
  - Add is_strictly_sorted as alias for is_strictly_monotonic 
