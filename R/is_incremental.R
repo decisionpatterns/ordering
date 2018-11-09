@@ -1,17 +1,17 @@
 # is_incremental 
 # 
-# Test if a field is incrementally increasing or decreasing
+# Test if a field is incrementally increasing or decreasing ordered
 #
-# @param x numeric 
+#' @param x numeric vector for testing for incremental ordering
 #' @param step integer; step size for `is_incremental`. (Default: 1)` 
-# @param na.rm logical; whether to omit `NA` values. (Default: TRUE)
+#' @param na.rm logical; whether to omit `NA` values. (Default: TRUE)
 # 
 #' @details 
 #' 
 #' `is_incremental` determines if x is incremental, i.e. monotonic and equally 
 #' spaced. 
 #' 
-#' `is_uniform` is a wrapper around `is_incremental` with `step=NULL`
+#' `is_uniform` is a wrapper around `is_incremental` with `step=1`
 #' 
 #' @return 
 #'   logical 
@@ -46,5 +46,5 @@ is_incremental <- function(x, step=1, na.rm=TRUE  ) {
 #' @rdname tests
 #' @export 
 
-is_uniform <-  function(x, step=1, na.rm=TRUE )
+is_uniform <-  function(x, step=NULL, na.rm=TRUE )
   is_incremental( x ,step=step, na.rm=na.rm )

@@ -15,7 +15,7 @@
 \alias{is_strictly_sorted}
 \alias{is_unsorted}
 \alias{is_strictly_unsorted}
-\title{Monotonicity Tests}
+\title{ordering  Tests}
 \usage{
 is_constant(x, na.rm = TRUE)
 
@@ -29,7 +29,7 @@ is_strictly_decreasing(x, na.rm = na.omit)
 
 is_incremental(x, step = 1, na.rm = TRUE)
 
-is_uniform(x, step = 1, na.rm = TRUE)
+is_uniform(x, step = NULL, na.rm = TRUE)
 
 is_monotonic(x, na.rm = TRUE)
 
@@ -52,6 +52,10 @@ missing values}
 \item{step}{integer; step size for \code{is_incremental}. (Default: 1)`}
 
 \item{...}{used for passing default arguments}
+
+\item{x}{numeric vector for testing for incremental ordering}
+
+\item{na.rm}{logical; whether to omit \code{NA} values. (Default: TRUE)}
 }
 \value{
 logical or NA. (NB: NA is returned because it is a logical vector and this is
@@ -69,7 +73,7 @@ Tests to various monotone properties of vectors.
 \code{is_incremental} determines if x is incremental, i.e. monotonic and equally
 spaced.
 
-\code{is_uniform} is a wrapper around \code{is_incremental} with \code{step=NULL}
+\code{is_uniform} is a wrapper around \code{is_incremental} with \code{step=1}
 
 \code{is_[strictly_]monotonic} determine the sort properties of \code{x}.
 

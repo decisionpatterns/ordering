@@ -1,4 +1,4 @@
-Package: monotone
+Package: ordering
 Type: Package
 Title: Test, Check, Verify, Investigate the Monotonic Properties of Vectors
 Version: 0.6.0
@@ -6,18 +6,18 @@ Date: 2018-06-03
 Author: Christopher Brown
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Description: This package provides several functions for 
-    testing/checking/verify/investigating the monotonic properties of vectors. 
+    testing/checking/verify/investigating the ordering of vectors. 
     The 'is_[strictly_]*' family of functions test vectors for 
     'monotonic', 'increasing', 'decreasing', 'sorted' properties; 'is_constant' 
-    and 'is_incremental' test for the degree of monotonicity. `monotoniciy` 
-    reports the monotonicty type and level.   
+    and 'is_incremental' test for the degree of ordering. `ordering` 
+    reports ordering type.   
 Suggests:
-    testthat
-    , na.tools(>= 0.3.0)
+    testthat, 
+    na.tools(>= 0.3.0)
 License: GPL (>= 2)
-URL: https://github.com/decisionpatterns/monotone
-BugReports: https://github.com/decisionpatterns/monotone/issues
-RoxygenNote: 6.0.1.9000
+URL: https://github.com/decisionpatterns/ordering
+BugReports: https://github.com/decisionpatterns/ordering/issues
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Repository: CRAN
 Encoding: UTF-8

@@ -1,6 +1,4 @@
-#' @title Monotonicity Tests
-#' 
-#' @description 
+#' ordering  Tests
 #' 
 #' Tests vectors for (strictly) increasing, decreasing, monotonic and 
 #' constant properties 
