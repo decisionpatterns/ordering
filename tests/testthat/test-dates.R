@@ -15,8 +15,4 @@ test_that( "dates", {
   dts_increasing %>% is_monotonic %>% expect_true()
   dts_increasing %>% rev() %>% is_monotonic %>% expect_true()
 
-    
-    
 })
-
-

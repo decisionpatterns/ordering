@@ -4,22 +4,20 @@
 #' 
 #' @param x numeric vector
 #' @param na.rm logical; whether to omit `NA` values. (Default: TRUE)
-# @param na.action function to handle \code{NA} values 
-# (default:\code{\link[stats]{na.omit}})
-# @param ... additional arguments passed to \code{na.action}
 #' 
 #' @details 
 #' 
-#' \code{monotonicty} determines the monotonicy (first derivative) of a numeric 
-#' vector as one of:
+#' \code{monotonicty} determines the ordering/sorting of a vector, 
+#' one of:
 #' 
-#'  - stictly increasing, 
-#'  - increasing / montonically increasing / non-decreasing, 
-#'  - decreasing / monotonically decreasing / non-increasing, 
-#'  - strictly decreasing, or  
-#'  - constant  
+#'  - +2: stictly increasing, 
+#'  - +1: increasing / montonically increasing / non-decreasing,
+#'  -  0: constant or unsorted 
+#'  - -1: decreasing / monotonically decreasing / non-increasing, 
+#'  - -2: strictly decreasing, or  
 #' 
-#' ordering tests, e.g. [is_increasing] are more efficient at testing.
+#' ordering tests, e.g. [is_increasing] are more efficient at testing 
+#' for specific cases.
 #' 
 #' `monotonicity()` is an alias for `ordering`. 
 #' 
@@ -35,7 +33,10 @@
 #' @references
 #'   http://en.wikipedia.org/wiki/Monotonic_function
 #'   http://stackoverflow.com/questions/13093912/how-to-check-if-a-sequence-of-numbers-is-monotonically-increasing-or-decreasing
-#'         
+#'
+#' @seealso 
+#'  - [base::is.unsorted] 
+#'          
 #' @examples
 #'   ordering( 1:3 )      # 2  
 #'   ordering( c(1,1,3) ) # 1 
@@ -43,13 +44,34 @@
 #'   ordering( c(3,1,1) ) # -1
 #'   ordering( 3:1 )      # -2
 #'   
+#'   ordering(letters)        # 2 
+#'   ordering( rev(letters) ) # -2 
+#'   
 #' @md
+#' @importFrom stats na.omit
 #' @rdname ordering
 #' @export
 
-ordering <- function( x, na.rm=TRUE ) { 
+
+ordering <- function( x, na.rm=TRUE ) UseMethod('ordering')
+
+ordering.default <- function(x, na.rm=TRUE) { 
+
+  if( na.rm==TRUE ) x <- na.omit(x)  
   
-  # if( ! is.numeric(x) ) stop( "ordering can only be determined for numeric vectors.")
+ if( base::is.unsorted(x) ) return(0)
+  
+ if( is_increasing(x) ) 
+   if( is_strictly_increasing(x) ) return(2) else return(1)
+  
+ if( is_decreasing(x) ) 
+   if( is_strictly_decreasing(x) ) return(-2) else return(0) 
+    
+}
+
+
+#' @export
+ordering.numeric <- function( x, na.rm=TRUE ) { 
   
   if( na.rm==TRUE ) x <- na.omit(x)
   
@@ -71,6 +93,8 @@ ordering <- function( x, na.rm=TRUE ) {
   return(0)
   
 }
+
+
 
 
 #' @rdname ordering

@@ -20,7 +20,7 @@ x321 <- letters[ c(3,2,1) ]
 x1223 <- letters[ c(1,2,2,3) ]
 
 
-test_that( "int", { 
+test_that( "char", { 
   
   int_strictly_increasing %>% is_monotonic %>% expect_true()
   int_strictly_increasing %>% rev() %>% is_monotonic %>% expect_true()
@@ -34,7 +34,7 @@ test_that( "int", {
   int_strictly_increasing %>% is_sorted %>% expect_true()
   int_strictly_decreasing %>% is_sorted %>% expect_true()
   
-  # int_strictly_increasing %>% monotonicity() %>% expect_equal(2)
+  int_strictly_increasing %>% monotonicity() %>% expect_equal(2)
   # int_strictly_decreasing %>% monotonicity() %>% expect_equal(-2)
   
 })

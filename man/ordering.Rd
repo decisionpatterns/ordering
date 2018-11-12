@@ -29,17 +29,18 @@ integer;
 Determining the ordering (montonicity) of a vector
 }
 \details{
-\code{monotonicty} determines the monotonicy (first derivative) of a numeric
-vector as one of:
+\code{monotonicty} determines the ordering/sorting of a vector,
+one of:
 \itemize{
-\item stictly increasing,
-\item increasing / montonically increasing / non-decreasing,
-\item decreasing / monotonically decreasing / non-increasing,
-\item strictly decreasing, or
-\item constant
+\item +2: stictly increasing,
+\item +1: increasing / montonically increasing / non-decreasing,
+\item 0: constant or unsorted
+\item -1: decreasing / monotonically decreasing / non-increasing,
+\item -2: strictly decreasing, or
 }
 
-ordering tests, e.g. \link{is_increasing} are more efficient at testing.
+ordering tests, e.g. \link{is_increasing} are more efficient at testing
+for specific cases.
 
 \code{monotonicity()} is an alias for \code{ordering}.
 }
@@ -50,8 +51,16 @@ ordering tests, e.g. \link{is_increasing} are more efficient at testing.
   ordering( c(3,1,1) ) # -1
   ordering( 3:1 )      # -2
   
+  ordering(letters)        # 2 
+  ordering( rev(letters) ) # -2 
+  
 }
 \references{
 http://en.wikipedia.org/wiki/Monotonic_function
 http://stackoverflow.com/questions/13093912/how-to-check-if-a-sequence-of-numbers-is-monotonically-increasing-or-decreasing
+}
+\seealso{
+\itemize{
+\item \link[base:is.unsorted]{base::is.unsorted}
+}
 }

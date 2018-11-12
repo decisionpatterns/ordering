@@ -1,5 +1,7 @@
 # TODO
 
+ - [ ] Change package name to `sorted` (sordid?) or `order`
+ 
  - [ ] Add `step_size()` for reporting step size for incremental vectors.
 
  - See base::is.unsorted.  There can be many uses of this but can probably 

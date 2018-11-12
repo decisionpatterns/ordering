@@ -1,3 +1,7 @@
+# ordering 0.7.1 
+ 
+ - `ordering()` now works for non-numerics
+
 # ordering 0.7.0 
 
 # monotone 0.4.1

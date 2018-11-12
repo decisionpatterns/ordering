@@ -1,8 +1,8 @@
 Package: ordering
 Type: Package
 Title: Test, Check, Verify, Investigate the Monotonic Properties of Vectors
-Version: 0.7.0
-Date: 2018-11-09
+Version: 0.7.1
+Date: 2018-11-12
 Authors@R: c(
     person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
     person("Decision Patterns", role = "cph")
