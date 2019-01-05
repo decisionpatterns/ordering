@@ -1,5 +1,12 @@
 # ordering
 
+![](https://img.shields.io/cran/v/ordering.svg) <!-- Version --> 
+![](https://img.shields.io/cran/l/ordering.svg) <!-- License --> 
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Downloads](https://cranlogs.r-pkg.org/badges/ordering?color=brightgreen)](https://www.r-pkg.org/pkg/ordering)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/ordering)](https://cran.rstudio.com/web/packages/ordering/index.html)
+<!-- [![Research software impact](http://depsy.org/api/package/cran/ordering/badge.svg)](http://depsy.org/package/r/ordering) -->
+
 **Test/Check/Verify/Investigate the Ordering of Vectors**
 
 **ordering** provides several functions for testing/checking/verify/investigating the ordering of vectors (numeric or otherwise). 
